@@ -24,7 +24,7 @@ gulp.task("vendor", function(){
     .pipe(gulp.dest(paths.scriptDest));
 });
 
-gulp.task("couchapp", ['less'], function(){
+gulp.task("couchapp", ['less', 'js'], function(){
   exec("cd app; couchapp push", function (error, stdout, stderr) {      
     console.log('Gulp CouchApp:'.magenta);
     if (error !== null) {
@@ -40,12 +40,19 @@ gulp.task("couchapp", ['less'], function(){
 });
 
 gulp.task('less', function(){
-  return gulp.src('./src/less/**/*.less')
+  return gulp.src('src/less/**/*.less')
   .pipe(less({
     paths: [ __dirname + '/bower_components/bootstrap-less/less/' ],
     compress : true
   }))
   .pipe(gulp.dest(paths.cssDest));
+});
+
+gulp.task('js', function(){
+  return gulp.src('src/js/**/*.js')
+  .pipe(uglify())
+  .pipe(concat('app.min.js'))
+  .pipe(gulp.dest(paths.scriptDest));
 });
 
 gulp.task('watch', function(){
