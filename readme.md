@@ -1,14 +1,21 @@
 # The People's Library
 
-The People's Library is an e-book library that syncs and a e-book reader web app. It is a CouchApp that resides inside a media library
+The People's Library is a decentralized, sharable, syncable media library and web app. 
+It's a web app inside a media library and a media libaray inside a web app.
 
 ## Benefits:
 
 * HTML is open and cross device
-* Media files -as well as the app itself- sync locally or via internet
+* Decentralized - media files (as well as the app itself) can sync peer-to-peer or via internet
 * 100% free & open
-* Kindles can access libraries via an e-book with a link in it. Built-n browser is the e-reader
+* It's all one giant library! 
 
 ## Uses
+
 * Seamless Sharing
 * Appliances that contain their manuals tutorial videos
+
+### Cleverness
+
+* Kindles can access libraries via an e-book with a link in it, so the built-in browser contains the People's Library
+
