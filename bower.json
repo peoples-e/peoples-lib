@@ -1,0 +1,7 @@
+{
+  "name": "The People's Library",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.2.19"
+  }
+}
