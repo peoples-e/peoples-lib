@@ -5,6 +5,8 @@ It's a web app inside a media library and a media library inside a web app.
 
 **__At this point The People's Library is more a proposal than an implementation.__**
 
+However, [here is a demo](http://owise1.cloudant.com/peoples-lib/_design/peoples-lib/index.html)
+
 ## Benefits:
 
 * HTML5 & javascript are open, widely suported and widely accessible
