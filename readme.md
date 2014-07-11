@@ -6,18 +6,19 @@ It's a web app inside a media library and a media libaray inside a web app.
 
 ## Benefits:
 
-* HTML5 is open and widely suported
+* HTML5 & javascript are open, widely suported and widely accessible
 * Decentralized - media files (as well as the app itself) are stored locally and can sync peer-to-peer or via internet
 * 100% free & open
+* Less Complex - built only on [CouchDB](http://couchdb.apache.org/) allows it to be run on low level devices
 * It's all one giant library! 
 
 ## Uses
 
 * Seamless Sharing
 * Compiling all of the world's content in a giant decentralized database
-* Appliances that contain their manuals tutorial videos
 
-### Cleverness
+#### Fun Thoughts
 
-* Kindles can access libraries via an e-book with a link in it, so the built-in browser contains the People's Library
+* Closed devices such as Kindles can access People's Libraries via an e-book with a link in it. The built-in browser would load the People's Library e-reader
+* Appliances that serve their own manuals & tutorial videos
 
