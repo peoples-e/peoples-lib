@@ -17,9 +17,17 @@ You could totally use other programs to package up the Tumblr and then share it 
 
 ## Use Cases
 
-* A user on a desktop PC navigates to a remote peoples-lib via URL.  The user is able to view, search, consume and synch any files in the remote library.  Synched files are stored in the browser for offline use. They can also be downloaded to the PC file system.  The user is also able to see others users who are currently in the library and synch with them peer-to-peer using webRTC
-* Guerilla Public Libraries - A raspberry pi or openWRT router running The People's Library is plugged into an out-of-the-way outlet inside a physical public library (or cafe, supermarket, park...).  The device appears as an open wireless access point that allows all connected to view, search, consume and synch (in either direction, creating a free & local space for public exchange).
-* Seamless Sharing - Two devices containing The People's Library could locate each other and synch automatically.  A Protest organizer might create a library with relevant literature & propaganda allowing protestors to set their libraries to openly synch.
+![cloud-sync](/docs/assets/cloud-sync.jpg "Cloud Sync")
+
+* A user on a desktop PC navigates to a remote peoples-lib via URL.  The user is able to view, search, consume and sync any files in the remote library.  Synced files are stored in the browser for offline use. They can also be downloaded to the PC file system.  The user is also able to see others users who are currently in the library and sync with them peer-to-peer using webRTC
+
+![public-library](/docs/assets/public-library.jpg "Guerilla Public Library")
+
+* Guerilla Public Libraries - A raspberry pi or openWRT router running The People's Library is plugged into an out-of-the-way outlet inside a physical public library (or cafe, supermarket, park...).  The device appears as an open wireless access point that allows all connected to view, search, consume and sync (in either direction, creating a free & local space for public exchange).
+
+![protest](/docs/assets/protest.jpg "Seamless Sharing")
+
+* Seamless Sharing - Two devices containing The People's Library could locate each other and sync automatically.  A Protest organizer might create a library with relevant literature & propaganda allowing protestors to set their libraries to openly sync.
 
 
 #### Fun Thoughts
