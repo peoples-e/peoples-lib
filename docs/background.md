@@ -1,5 +1,8 @@
 # Thoughts on The People's Library
 
+The People's Library is a decentralized, sharable, syncable media library and web app. 
+It's a web app inside a media library and a media library inside a web app (i.e. it's a [CouchDB](http://couchdb.apache.org/) [CouchApp](http://couchdb.readthedocs.org/en/latest/couchapp/) containing [pouchdb](http://pouchdb.com/)).
+
 ![mid-century](/docs/assets/mid-century.jpg "Arts & Architecture")
 
 [Mid-century Modern Design](http://midcenturymoderndesign.tumblr.com/) is an in-depth visual catalogue of the Mid-Century Modern graphic aesthetic. Right now it is hosted for free by Tumblr, a for-profit company owned by Yahoo.  But [as we know](http://contemporary-home-computing.org/1tb/about) free website services (owned by Yahoo) don't always stand the test of time.  So, what if we [made this tumblr into an epub](http://streambooks.thepeoplesebook.net) ([which someone did](http://beta.thepeoplesebook.net/b/streambooks/3eceb1ee7e1f8b99b9c4d13cacee895c) (300+MB)) and added it to our library. Then we could enjoy [Theo Inglis's](http://theoinglis.tumblr.com/) efforts off-line while sharing and conserving it outside the demands of a for-profit environment.  Sounds pretty ok.
