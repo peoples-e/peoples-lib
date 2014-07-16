@@ -1,6 +1,11 @@
 # Thoughts on The People's Library
 
-The People's Library is a couchDB couchApp containing pouchDB. 
+![mid-century](/docs/assets/mid-century.jpg "Arts & Architecture")
+
+[Mid-century Modern Design](http://midcenturymoderndesign.tumblr.com/) is an in-depth visual catalogue of the Mid-Century Modern graphic aesthetic. Right now it is hosted for free by Tumblr, a for-profit company owned by Yahoo.  But [as we know](http://contemporary-home-computing.org/1tb/about) free website services (owned by Yahoo) don't always stand the test of time.  So, what if we [made this tumblr into an epub](http://streambooks.thepeoplesebook.net) ([which someone did](http://beta.thepeoplesebook.net/b/streambooks/3eceb1ee7e1f8b99b9c4d13cacee895c)(300+MB)) and added it to our library so we could enjoy [Theo Inglis's](http://theoinglis.tumblr.com/) efforts off-line while sharing and conserving it outside the demands of a for-profit environment.  Sounds pretty ok.
+
+You could totally use other programs to package up the Tumblr and then share it via bit torrent.  That would work too.  However, you wouldn't be able to enjoy the images in the meantime.  It wouldn't be _useful_ in the interim.  So it'd be less likely to last.
+
 
 ## Benefits:
 
@@ -12,9 +17,10 @@ The People's Library is a couchDB couchApp containing pouchDB.
 
 ## Use Cases
 
-* A user on a desktop PC navigates to a remote peoples-lib via URL.  The user is able to view, search, consume and synch any file in the remote library.  Synched files are stored in the browser for offline use. They can also be downloaded to the PC file system.  The user is also able to see others users who are currently in the library and synch with them peer-to-peer using webRTC
-* Guerilla Public Libraries - A raspberry pi or openWRT router running The People's Library is plugged into an out-of-the-way outlet inside a physical public library (or cafe, supermarket, park...).  The device appears as an open wireless access point that allows all connected to view, search, consume and synch (in either direction).
+* A user on a desktop PC navigates to a remote peoples-lib via URL.  The user is able to view, search, consume and synch any files in the remote library.  Synched files are stored in the browser for offline use. They can also be downloaded to the PC file system.  The user is also able to see others users who are currently in the library and synch with them peer-to-peer using webRTC
+* Guerilla Public Libraries - A raspberry pi or openWRT router running The People's Library is plugged into an out-of-the-way outlet inside a physical public library (or cafe, supermarket, park...).  The device appears as an open wireless access point that allows all connected to view, search, consume and synch (in either direction, creating a free & local space for public exchange).
 * Seamless Sharing - Two devices containing The People's Library could locate each other and synch automatically.  A Protest organizer might create a library with relevant literature & propaganda allowing protestors to set their libraries to openly synch.
+
 
 #### Fun Thoughts
 
