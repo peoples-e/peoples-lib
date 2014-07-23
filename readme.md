@@ -8,3 +8,4 @@ It's a web app inside a media library and a media library inside a web app (i.e.
 However, [here is a demo](http://owise1.cloudant.com/peoples-lib/_design/peoples-lib/index.html)
 
 [Read more here](/docs/background.md)
+[Contributing](/doc/development.md)
