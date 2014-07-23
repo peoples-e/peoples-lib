@@ -1,22 +1,29 @@
 # Development
 
-1. First, you'll need to install [couchapp](https://github.com/couchapp/couchapp) 
-2. Create a [.couchapprc](http://guide.couchdb.org/draft/managing.html#configuring) file. It could look like this:
+First, you'll need to install [couchapp](https://github.com/couchapp/couchapp) 
 
-	{
-	  "env" : {
-	  	"default" : {
-	        "db" : "http://localhost:5984/peoples-lib"
-	  	}
-	  }
-	}
+Create a [.couchapprc](http://guide.couchdb.org/draft/managing.html#configuring) file. It could look like this:
 
-3. Fetch your dependencies
-	
-	npm install
+```javascript
+{
+  "env" : {
+  	"default" : {
+        "db" : "http://localhost:5984/peoples-lib"
+  	}
+  }
+}
+```
 
-	bower install
+Fetch your dependencies
+```	
+npm install
+```
+```
+bower install
+```
 
-4. Develop using...
+Develop using...
 
-	gulp watch
+```
+gulp watch
+```
