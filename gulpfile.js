@@ -7,7 +7,7 @@ var concat         = require('gulp-concat');
 var uglify         = require('gulp-uglify');
 var less           = require('gulp-less');
 var del            = require('del');
-var gulpBowerFiles = require('gulp-bower-files');
+var mainBowerFiles = require('main-bower-files');
 
 
 var paths = {
@@ -18,7 +18,7 @@ var paths = {
 };
 
 gulp.task("vendor", function(){
-    gulpBowerFiles()
+    gulp.src(mainBowerFiles())
     .pipe(uglify())
     .pipe(concat('vendor.min.js'))
     .pipe(gulp.dest(paths.scriptDest));
