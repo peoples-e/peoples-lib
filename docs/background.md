@@ -1,7 +1,9 @@
 # Thoughts on The People's Library
 
 The People's Library is a decentralized, sharable, syncable media library and web app. 
-It's a web app inside a media library and a media library inside a web app (i.e. it's a [CouchDB](http://couchdb.apache.org/) [CouchApp](http://couchdb.readthedocs.org/en/latest/couchapp/) containing [pouchdb](http://pouchdb.com/)).
+It's a web app inside a media library and a media library inside a web app (i.e. it's a [CouchDB](http://couchdb.apache.org/) [CouchApp](http://couchdb.readthedocs.org/en/latest/couchapp/) containing [pouchdb](http://pouchdb.com/)).  
+
+Any device with a web browser becomes a library that allows its owner to collect, consume and share all it contains.
 
 ![mid-century](/docs/assets/mid-century.jpg "Arts & Architecture")
 
@@ -10,19 +12,11 @@ It's a web app inside a media library and a media library inside a web app (i.e.
 You could totally use other programs to package up the Tumblr and then share it via bit torrent.  That would work too.  However, you wouldn't be able to enjoy the images in the meantime.  It wouldn't be _useful_ in the interim.  So it'd be less likely to last.
 
 
-## Benefits:
-
-* HTML5 & javascript are open, widely suported and widely accessible
-* Decentralized - media files (as well as the app itself) are stored locally and can sync peer-to-peer or via internet
-* 100% free & open
-* Less Complex - built only on [CouchDB](http://couchdb.apache.org/) allows it to be run on low level devices
-* Compiling all of the world's content in a giant decentralized database
-
 ## Use Cases
 
 ![cloud-sync](/docs/assets/cloud-sync.jpg "Cloud Sync")
 
-* A user on a desktop PC navigates to a remote peoples-lib via URL.  The user is able to view, search, consume and sync any files in the remote library.  Synced files are stored in the browser for offline use. They can also be downloaded to the PC file system.  The user is also able to see others users who are currently in the library and sync with them peer-to-peer using webRTC
+* A user on a desktop PC navigates to a remote peoples-lib via URL.  The user is able to view, search, consume and sync any files in the remote library.  Synced files are stored in the browser for offline use. They can also be downloaded to the PC file system.  The user is able to see others users who are currently in the library and sync with them peer-to-peer using webRTC
 
 ![public-library](/docs/assets/public-library.jpg "Guerilla Public Library")
 
@@ -32,12 +26,23 @@ You could totally use other programs to package up the Tumblr and then share it 
 
 * Seamless Sharing - Two devices containing The People's Library could locate each other and sync automatically.  A Protest organizer might create a library with relevant literature & propaganda allowing protestors to set their libraries to openly sync.
 
+* Private Collections - While waiting for his date to come downstairs from preparing for the evening's events, a young suitor uses his smart phone to peruse his date's father's audio collection.  Discovering one of his favorite [obscure bands](http://open.spotify.com/artist/5awyxT5dfxGoIIG6zuvxLv) in the father's collection emboldens him to strike up a conversation.  Improbably, the band is also one of the father's all-time favorites too!  Hearts are warmed and a father's mild approval is won.
 
 #### Fun Thoughts
 
 * Closed devices such as Kindles can access People's Libraries via an e-book with a link in it. The built-in browser would load the People's Library e-reader
 * Appliances that serve their own manuals & tutorial videos
+* Browser-based artworks can be archived, collected and shared as easily as more traditional media types (epubs, mp3s, mp4...)
+* Offering the library owner a choice to offer their files for download via copying or _moving_ (i.e. someone else downloading it removes it from the original 
+owner's collection)
 
+## Benefits:
+
+* HTML5 & javascript are open, widely suported and widely accessible
+* Decentralized - media files (as well as the app itself) are stored locally and can sync peer-to-peer or via internet
+* 100% free & open
+* Less Complex - built only on [CouchDB](http://couchdb.apache.org/) allows it to be run on low level devices
+* Compiling all of the world's content in a giant decentralized database
 
 # Inspiration
 
