@@ -4,11 +4,12 @@
   "dependencies": {
     "angular": "1.2.19",
     "bootstrap-less": "~3.1.1",
-    "CornerCouch": "*"
+    "CornerCouch": "*",
+    "pouchdb": "~2.2.3"
   },
   "overrides": {
     "bootstrap-less": {
-      "ignore" : true
+      "ignore": true
     }
   }
 }

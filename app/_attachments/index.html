@@ -10,20 +10,36 @@
   	<div class="container">
   		<div class="row">
   			<div class="col-md-12">
-			    <h1>The People's Library</h1>
-  				<h2>Media</h2>
-  				<div class="media-listing">
-	  				<ul class="clearfix">
-	  					<li ng-repeat="media in medias">
-	  						<a href="{{media.media.url}}" target="_blank" ng-if="media.coverImg"><img ng-src="{{media.coverImg}}" class="cover"/></a>
-	  						<a href="{{media.media.url}}" target="_blank">{{media.info.title}}</a>
-	  						<small>{{media.content_type}}</small>
-	  					</li>
-	  				</ul>
-  				</div>
+			    <h1>The People's Library</h1> 
           <div>
             <label for="">Upload:</label> <input type="file" onchange="angular.element(this).scope().upload(this)" />
           </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Remote Media</h2>
+          <div class="media-listing">
+            <ul class="clearfix">
+              <li ng-repeat="media in medias">
+                <a href="{{media.media.url}}" target="_blank" ng-if="media.coverImg"><img ng-src="{{media.coverImg}}" class="cover"/></a>
+                <a href="{{media.media.url}}" target="_blank">{{media.info.title}}</a>
+                <small>{{media.content_type}}</small>
+                <a ng-click="sync(media)" ng-hide="media.__syncing"><i class="glyphicon glyphicon-cloud-download"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+  				<h2>Local Media</h2>
+  				<div class="media-listing">
+	  				<ul class="clearfix">
+	  					<li ng-repeat="media in localMedias">
+	  						<a href="{{media.media.url}}" target="_blank" ng-if="media.coverImg"><img ng-src="{{media.coverImg}}" class="cover"/></a>
+	  						<a href="{{media.media.url}}" target="_blank">{{media.info.title}}</a>
+	  						<small>{{media.content_type}}</small>
+                <a ng-click="remove(media)"><i class="glyphicon glyphicon-trash"></i></a>
+	  					</li>
+	  				</ul>
+  				</div>
   			</div>
   			
   		</div>
