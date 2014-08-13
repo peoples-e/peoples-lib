@@ -23,7 +23,7 @@
                 <a href="{{media.media.url}}" target="_blank" ng-if="media.coverImg"><img ng-src="{{media.coverImg}}" class="cover"/></a>
                 <a href="{{media.media.url}}" target="_blank">{{media.info.title}}</a>
                 <small>{{media.content_type}}</small>
-                <a ng-click="sync(media)" ng-hide="media.__syncing"><i class="glyphicon glyphicon-cloud-download"></i></a>
+                <a ng-click="sync(media)" ng-class="{ loading : media.__loading }"><i class="glyphicon glyphicon-cloud-download"></i></a>
               </li>
             </ul>
           </div>
@@ -36,7 +36,7 @@
 	  						<a href="{{media.media.url}}" target="_blank" ng-if="media.coverImg"><img ng-src="{{media.coverImg}}" class="cover"/></a>
 	  						<a href="{{media.media.url}}" target="_blank">{{media.info.title}}</a>
 	  						<small>{{media.content_type}}</small>
-                <a ng-click="remove(media)"><i class="glyphicon glyphicon-trash"></i></a>
+                <a ng-click="remove(media)" ng-class="{ loading : media.__loading }"><i class="glyphicon glyphicon-trash"></i></a>
 	  					</li>
 	  				</ul>
   				</div>

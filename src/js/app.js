@@ -39,14 +39,15 @@ PeoplesLibApp.controller('ListingCtrl', ['$scope', '$http', 'cornercouch', funct
   });
  
   $scope.sync = function(doc){
-      doc.__syncing = true;
+      doc.__loading = true;
       $scope.localDb.replicate.from(window.location.origin + '/' + config.db, { doc_ids : [doc._id] } ,function(err, res){
         showLocalMedia();
-        doc.__syncing = false;
+        doc.__loading = false;
       });
   }
 
   $scope.remove = function(doc){
+    doc.__loading = true;
     // pouchDB does not currently support _purge (http://wiki.apache.org/couchdb/Purge_Documents)
     // so we have to create a new db wo/ the doc 
     // cuz otherwise, once we deleted a doc, we'd never be able to get it again
@@ -131,4 +132,5 @@ PeoplesLibApp.controller('ListingCtrl', ['$scope', '$http', 'cornercouch', funct
     }
   }
 
+  // $http.get($scope.DB + '_design/peoples-lib/_view/media?reduce=false&limit=10&include_docs=true')
 }]);
