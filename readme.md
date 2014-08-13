@@ -5,7 +5,7 @@ It's a web app inside a media library and a media library inside a web app (i.e.
 
 **__At this point The People's Library is more a proposal than an implementation.__**
 
-However, [here is a demo](http://owise1.cloudant.com/peoples-lib/_design/peoples-lib/index.html)
+However, [here is a demo](http://peoples-lib.iriscouch.com/peoples-lib/_design/peoples-lib/index.html)
 
 * [Thoughts on The People's Library](/docs/background.md)
 * [Contributing](/docs/development.md)
