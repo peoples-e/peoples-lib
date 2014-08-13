@@ -3,7 +3,17 @@ var _pl = {
   design : 'peoples-lib'
 };
 
-var PeoplesLibApp = angular.module('PeoplesLibApp', ['CornerCouch']);
+window.URL = window.URL || window.webkitURL;
+
+var PeoplesLibApp = angular.module('PeoplesLibApp', ['CornerCouch'])
+  .config( [
+      '$compileProvider',
+      function( $compileProvider ){   
+          var okReg = /^\s*(https?|blob):/;
+          $compileProvider.aHrefSanitizationWhitelist(okReg);
+          $compileProvider.imgSrcSanitizationWhitelist(okReg);
+      }
+  ]);
 
 PeoplesLibApp.controller('ListingCtrl', ['$scope', '$http', 'cornercouch', function ($scope, $http, cornercouch) {
   var config = window._pl;
@@ -11,9 +21,10 @@ PeoplesLibApp.controller('ListingCtrl', ['$scope', '$http', 'cornercouch', funct
   $scope.localDb = new PouchDB(config.db);
 
   function showLocalMedia(){
-    $scope.localDb.query(config.design + '/media', { reduce : false, limit : 10, include_docs : true }, function(err, resp){
+    $scope.localDb.query(config.design + '/media', { reduce : false, limit : 10, include_docs : true, attachments : true }, function(err, resp){
+      
       $scope.$apply(function(){
-        $scope.localMedias = resp.rows.map(processDoc);
+        $scope.localMedias = resp.rows.map(pullDoc(true)).map(processDoc);
       })
     });
   }
@@ -74,23 +85,50 @@ PeoplesLibApp.controller('ListingCtrl', ['$scope', '$http', 'cornercouch', funct
   // get listing
   $scope.db.query(config.design, 'media', { reduce : false, limit : 10, include_docs : true })
   .success(function(resp){
-    $scope.medias = resp.rows.map(processDoc);
+    $scope.medias = resp.rows.map(pullDoc()).map(processDoc);
   });
 
-  function processDoc(row){
-    var doc = row.doc;
+  function processDoc(doc){
     if(doc._attachments){
       angular.forEach(doc._attachments, function(attachInfo, attachName){
         if(/^cover\./.test(attachName)){
-          doc.coverImg = '/' + config.db + '/' + doc._id + '/' + attachName;
+          if(doc._local){
+            $scope.localDb.getAttachment(doc._id, attachName)
+            .then(function(attach){
+              $scope.$apply(function(){
+                doc.coverImg = window.URL.createObjectURL(attach);
+              });
+            })
+          } else {
+            doc.coverImg = '/' + config.db + '/' + doc._id + '/' + attachName;
+            
+          }
         } else {
           doc.media     = attachInfo;
-          doc.media.url = '/' + config.db + '/' + doc._id + '/' + attachName;
+
+          if(doc._local){
+            $scope.localDb.getAttachment(doc._id, attachName)
+            .then(function(attach){
+              $scope.$apply(function(){
+                doc.media.url = window.URL.createObjectURL(attach);
+              });
+            });
+
+          } else {
+            doc.media.url = '/' + config.db + '/' + doc._id + '/' + attachName;
+          }
         }
       });
     }
     return doc; 
   }
 
-  // $http.get($scope.DB + '_design/peoples-lib/_view/media?reduce=false&limit=10&include_docs=true')
+  function pullDoc(isLocal){
+    return function(row){
+      var doc = row.doc;
+      doc._local = isLocal;
+      return doc;
+    }
+  }
+
 }]);
