@@ -27,3 +27,10 @@ Develop using...
 ```
 gulp watch
 ```
+
+
+
+##### Design
+
+* each document is self-contained
+* document body for meta data
